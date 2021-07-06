@@ -36,7 +36,7 @@ export default {
   methods: {
     async onLogin() {
       await this.$auth.loginWith('local', {data: this.credentials})
-      .then(() => {
+      .then(()=>{
         //auth saves the day
       })
       .catch((err)=>{

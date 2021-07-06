@@ -63,12 +63,9 @@ export default {
           property: false,
         },
         endpoints: {
-          // login: {url:'http://localhost:8000/api/login', method: 'post'},
-          // logout: {url:'http://localhost:8000/api/logout', method: 'post'},
-          // user: {url:'http://localhost:8000/api/user', method: 'get'},
-          login: {url:'http://203.177.91.82:7878/api/login', method: 'post'},
-          logout: {url:'http://203.177.91.82:7878/api/logout', method: 'post'},
-          user: {url:'http://203.177.91.82:7878/api/user', method: 'get'}
+          login: {url:'/api/login', method: 'post'},
+          logout: {url:'/api/logout', method: 'post'},
+          user: {url:'/api/user', method: 'get'}
         }
       }
     },
@@ -80,7 +77,9 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseUrl: 'https://lentrix.tk'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

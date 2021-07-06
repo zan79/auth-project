@@ -40,10 +40,9 @@ export default {
   },
   methods: {
     onRegister() {
-      // this.$axios.post('http://localhost:8000/api/register', this.user)
-      this.$axios.post('http://203.177.91.82:7878/api/register', this.user)
-      .then( (res) => {
-        if(res.status == 202) {
+      this.$axios.post('/api/register', this.user)
+      .then((res)=>{
+        if(res.status==202) {
           alert(res.data.message)
           this.user = {}
         }

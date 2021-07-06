@@ -9,6 +9,7 @@
         <b-navbar-nav class="ml-auto mr-5">
           <template v-if="$auth.loggedIn">
             <b-nav-item href="/dashboard"><span class=" btn btn-info">Dashboard</span></b-nav-item>
+            <b-nav-item href="/assets"><span class=" btn btn-warning">Assets</span></b-nav-item>
             <b-nav-item href="#" @click.prevent="onLogout"><span class=" btn btn-danger">Logout</span></b-nav-item>
           </template>
           <template v-else>
