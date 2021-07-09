@@ -7,7 +7,7 @@
     footer-bg-variant="dark"  footer-border-variant="dark"
     >
       Do you really want to delete this asset? <br>
-      {{asset.name}} {{asset.description}}
+      {{asset.name}} - {{asset.description}}
     </b-modal>  
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     async onDelete(){
-      this.$axios.delete('/api/assets/' + this.asset.id)
+      this.$axios.delete('api/assets/' + this.asset.id)
       .then((res)=>{
         if(res.status==202){
           alert("Asset Succesfully Deleted")
